@@ -1,26 +1,45 @@
-# Waymo_Open_DataSet
-Fall 2019 CAIS++ Project working with the Waymo Open Dataset
+# Fall 2019 CAIS++ Project working with the Waymo Open Dataset
 
-In the Fall of 2019, me (Ted Lewitt), Eric Ye and Jack Elliott explored the recently released Waymo Open Dataset,A dataset of real self driving car videos pre-labelled by Waymo for research use.
+
+<img style="float: right;" src="Images/cais_logo.png" >
+
+<img style="float: right;" src="Images/waymo_symbol.png">
+
+In the Fall of 2019, me (Ted Lewitt), Eric Ye and Jack Elliott explored the recently released Waymo Open Dataset, a dataset of real self driving car videos pre-labeled by Waymo for research use.
 
 ## Our Work
 
 We decided to spend the semester focusing on object detection and segmentation for the camera labels, leaving the 3D and video data for future semesters.
 
-We first explored the dataset in the *EDA.ipynb* file.
+The work is split into four sequential Jupyter Notebooks for the preprocessing, 
 
-Next we created our own Convolutional Neural Networks (CNNs) for a weather classifier in the *weather_CNN.py* file
+Be sure to check it all out and our **Final Presentation**, which can be found here. [ADD LINK]
 
-Finally, we used transfer learning and a (former) state of the art algorithm called FasterRCNN to perform the 2D segmentation and classification in the *Faster_RCNN.py* file.
+## Setup
 
-## How To Run It
+```
+pip install -r requirements.txt
+```
 
-The dataset is huge (1TB), so we won't host it natively. Simply follow the directions in the *data_generation* folder to create the data.
 
-After that, run either *.py* file to replicate our results.
+## File Descriptions
 
-## Final Presentation
+**Part 0: Exploratory Data Analysis**
 
-Follow this link to see the presentation we gave on this at the CAIS++ Fall Showcase!
-ADD LINK
+This script takes a first look at the dataset and walks through visualization and file structure for the dataset.
+
+**Part 1: Generate Weather DataSet**
+
+This script preprocesses the dataset by creating a new image folder with images to be used in part 2 based on the weather in the image.
+
+**Part 2: Weather Classifier Competition**
+
+This script shows three seperate CNN model architectures for a binary classifier, and we pit them against each other to find out the best one!
+
+**Part 3: Generating Object Detection API DataSet**
+
+This script preprocesses the dataset to create the tf.Examples dataset used by the Tensorflow Object Detection API. It also saves an image folder with the preprocessed images.
+
+
+
 
