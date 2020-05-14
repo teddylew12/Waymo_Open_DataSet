@@ -15,11 +15,12 @@ The work is split into four sequential Jupyter Notebooks for the preprocessing,
 
 Be sure to check it all out and our **Final Presentation**, which can be found here. [ADD LINK]
 
-## Setup
+## Setup <br>
 
-```
-pip install -r requirements.txt
-```
+You will need to set up the simple waymo reader and tensorflow object detection githubs which can be found here: <br>
+
+-https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md <br>
+-https://github.com/gdlg/simple-waymo-open-dataset-reader <br>
 
 
 ## File Descriptions
